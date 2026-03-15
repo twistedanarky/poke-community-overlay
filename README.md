@@ -48,6 +48,10 @@ Example:
 
 `https://<your-username>.github.io/<your-repo-name>/custom.html?bangers&pink&royalblue`
 
+Hex also works in shorthand (with or without `#`):
+
+`https://<your-username>.github.io/<your-repo-name>/custom.html?bangers&ffd1ec&2f2f2f`
+
 ### Named parameters
 
 - `font` → font preset or CSS font family
@@ -59,6 +63,8 @@ Example:
 Example:
 
 `https://<your-username>.github.io/<your-repo-name>/custom.html?font=fredoka&legendColor=%23ffd1ec&timerColor=%23cfe9ff&stroke=%232f2f2f&spawn=pic&audio=false`
+
+Tip: for named params with `#`, encode it as `%23`.
 
 ### Built-in font presets
 

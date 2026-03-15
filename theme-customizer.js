@@ -85,13 +85,31 @@ function setFont(fontValue) {
   );
 }
 
+function normalizeColor(colorValue) {
+  if (!colorValue) {
+    return null;
+  }
+
+  const trimmed = colorValue.trim();
+  const hexCandidate = trimmed.startsWith("#") ? trimmed.slice(1) : trimmed;
+  const isHex = /^[0-9a-fA-F]{3}([0-9a-fA-F]{3})?([0-9a-fA-F]{2})?$/.test(hexCandidate);
+
+  if (isHex) {
+    return `#${hexCandidate}`;
+  }
+
+  return trimmed;
+}
+
 function setColorVariable(variableName, colorValue) {
   if (!colorValue) {
     return;
   }
 
-  if (CSS.supports("color", colorValue)) {
-    rootStyle.setProperty(variableName, colorValue);
+  const normalizedColor = normalizeColor(colorValue);
+
+  if (normalizedColor && CSS.supports("color", normalizedColor)) {
+    rootStyle.setProperty(variableName, normalizedColor);
   }
 }
 
