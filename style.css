@@ -1,6 +1,8 @@
 html {
-  /* Remove HTML on use */
-  background-color: #222;
+  background-color: transparent;
+}
+body {
+  background-color: transparent;
 }
 body,
 fieldset,
