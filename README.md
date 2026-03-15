@@ -31,3 +31,39 @@ Use URL query params to control behavior:
 ### Example
 
 `https://<your-username>.github.io/<your-repo-name>/?spawn=gif&timer=true&audio=true`
+
+## Custom Theme Page
+
+Use `custom.html` to change font/colors directly from URL parameters.
+
+Base URL:
+
+`https://<your-username>.github.io/<your-repo-name>/custom.html`
+
+### Shorthand format
+
+`?font&textColor&strokeColor`
+
+Example:
+
+`https://<your-username>.github.io/<your-repo-name>/custom.html?bangers&pink&royalblue`
+
+### Named parameters
+
+- `font` → font preset or CSS font family
+- `text` → sets both header and timer text colors
+- `stroke` → text outline color
+- `legendColor` (optional) → header-only text color override
+- `timerColor` (optional) → timer-only text color override
+
+Example:
+
+`https://<your-username>.github.io/<your-repo-name>/custom.html?font=fredoka&legendColor=%23ffd1ec&timerColor=%23cfe9ff&stroke=%232f2f2f&spawn=pic&audio=false`
+
+### Built-in font presets
+
+- `bangers`
+- `fredoka`
+- `baloo`
+- `luckiest`
+- `comic`
